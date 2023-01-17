@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.main-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+.navbar {
+  padding: 10px;
+  display: flex;
+  background: black;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  color: white;
+}
+li {
+  list-style: none;
+  display: inline;
+  margin: 10px;
+  padding: 10px;
+  transition: 0.6s ease-out;
+}
+li:hover {
+  background-color: rgb(142, 0, 113);
+  cursor: pointer;
+}
+#logo-nav {
+  max-width: 30px;
+  max-height: 30px;
+}
+.main-footer {
+  display: flex;
+  min-height: 5vh;
+  position: relative;
+  bottom: 0;
+  height: 10px;
+  background-color: black;
+  font-size: large;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+.main-body1 {
+  min-height: 100vh;
+  font-size: x-large;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(64, 84, 178) 0%,
+    rgb(219, 2, 234) 90%
+  );
+  color: white;
+}
+.main-body2 {
+  min-height: 90vh;
+  font-size: x-large;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(
+    88.8deg,
+    rgb(239, 171, 245) 13.4%,
+    rgb(196, 181, 249) 76.3%
+  );
+  color: black;
+}
+.inputform > input[type="text"],
+input[type="password"] {
+  min-width: 100%;
+  margin-bottom: 15px;
+  padding: 16px 20px;
+  border: 0px;
+  border-radius: 8px;
+}
+.formbutton {
+  min-width: 100%;
+  margin-bottom: 10px;
+  padding: 15px;
+  background-color: rgb(144, 1, 144);
+  color: rgb(230, 217, 217);
+  border: none;
+  font-size: medium;
+  border-radius: 8px;
+  transition: 0.6s ease-in;
+}
+.formbutton:hover {
+  background-color: rgb(162, 5, 162);
+  font-size: large;
+  color: white;
+  cursor: pointer;
+}
+#action-text {
+  margin: 20px;
+}
