@@ -26,10 +26,10 @@ const Login = () => {
       })
       .then(
         (response) => {
-          console.log(response);
+          alert(response.data);
         },
         (error) => {
-          console.log(error);
+          alert(error.response.data);
         }
       );
   }

@@ -1,5 +1,5 @@
 import React from "react";
-
+import axios from "axios"
 const Register = () => {
   const [user, setuser] = React.useState({
     username: "",
@@ -18,7 +18,23 @@ const Register = () => {
   function formSubmitHandler(event) {
     event.preventDefault();
     console.log(user)
-    // callServer();
+    callServer();
+  }
+  function callServer() {
+    axios
+      .post("http://localhost:3300/register", {
+        username: user.username,
+        email: user.email,
+        password: user.password,
+      })
+      .then(
+        (response) => {
+          alert(response.data);
+        },
+        (error) => {
+          alert(error.response.data);
+        }
+      );
   }
   return (
     <div className="main-body2" id="main-body2">

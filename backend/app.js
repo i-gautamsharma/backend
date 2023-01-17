@@ -42,7 +42,7 @@ app.post("/register", (req, res) => {
   if (checkUser.length >0) {
     res.status(201).send(`${username} Already exists`);
   } else {
-    users.push({ username: username, password: password, email: email });
+    users.push({ "username": username, "password": password, "email": email });
     res.status(200).send("Successfully Signed up ...");
   }
 });
