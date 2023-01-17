@@ -64,7 +64,6 @@ const Login = () => {
           </form>
         </div>
       </div>
-      <div className="main-footer">Site Under Development</div>
     </div>
   );
 };
