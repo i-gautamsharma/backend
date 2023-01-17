@@ -20,9 +20,9 @@ const Login = () => {
   }
   function callServer() {
     axios
-      .post("http://localhost:3300/register", {
-        "username":Login.username,
-        "password":Login.password,
+      .post("http://localhost:3300/login", {
+        username: Login.username,
+        password: Login.password,
       })
       .then(
         (response) => {
@@ -58,7 +58,7 @@ const Login = () => {
             </button>
             <a href="#main-body2">
               <button className="formbutton" type="button">
-                Not Registered? Signup
+                Not Registered? Signup Here
               </button>
             </a>
           </form>

@@ -15,11 +15,16 @@ const Register = () => {
       };
     });
   }
+  function formSubmitHandler(event) {
+    event.preventDefault();
+    console.log(user)
+    // callServer();
+  }
   return (
     <div className="main-body2" id="main-body2">
       <div className="formContainer">
         <h1 id="action-text">Sign Up</h1>
-        <form className="inputform" onSubmit="">
+        <form className="inputform" onSubmit={formSubmitHandler}>
           <input
             type="text"
             placeholder="User Name"
