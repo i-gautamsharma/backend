@@ -81,7 +81,14 @@ li:hover {
   );
   color: black;
 }
-.inputform > input[type="text"],
+input[type="text"]{
+  min-width: 100%;
+  margin-bottom: 15px;
+  padding: 16px 20px;
+  border: 0px;
+  border-radius: 8px;
+}
+
 input[type="password"] {
   min-width: 100%;
   margin-bottom: 15px;
@@ -108,4 +115,14 @@ input[type="password"] {
 }
 #action-text {
   margin: 20px;
+}
+.password-icon {
+  display: inline;
+  max-height: 25px;
+  max-width: 25px;
+}
+.password-container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
 }

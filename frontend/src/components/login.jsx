@@ -33,6 +33,20 @@ const Login = () => {
         }
       );
   }
+  let imgpath="./show.png"
+  const [hidden, sethidden] = React.useState(true)
+  function show() {
+    sethidden(!hidden)
+  }
+  if (hidden) {
+    imgpath = "../show.png"
+    if (document.getElementById('user-password')) {
+      document.getElementById('user-password').type='password'
+    }
+  } else if (!hidden) {
+    imgpath = "../hide.png"
+    document.getElementById('user-password').type='text'
+  }
   return (
     <div>
       <div className="main-body1" id="main-body1">
@@ -46,13 +60,17 @@ const Login = () => {
               onChange={handleChange}
               value={Login.username}
             />
-            <input
-              type="password"
-              placeholder="Password "
-              name="password"
-              onChange={handleChange}
-              value={Login.password}
-            />
+            <div className="password-container">
+              <input
+                id="user-password"
+                type="password"
+                placeholder="Password "
+                name="password"
+                onChange={handleChange}
+                value={Login.password}
+              />
+              <img src={imgpath} className="password-icon" onClick={show}/>
+            </div>
             <button className="formbutton" type="Submit">
               Login
             </button>
